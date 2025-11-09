@@ -1,0 +1,84 @@
+/* Club Lit Aurora Theme
+ * Core design tokens and global effects
+ * Apply via CSS variables (var(--token-name))
+ */
+
+:root {
+  /* Colors: Base surfaces and text */
+  --bg: #0b0f1a;
+  --bg-elev: #111929;
+  --surface: #121826;
+  --card: #161f32;
+  --text: #ffffff;          /* Enhanced contrast for better readability */
+  --text-secondary: #e6ecf8;
+  --text-muted: #c5cde3;    /* Increased contrast for muted text */
+  --border: #2a3c5c;        /* Slightly higher contrast border */
+
+  /* Colors: Primary and accent */
+  --primary: #60d6ff;       /* Enhanced brightness for better contrast */
+  --primary-600: #38bdf8;
+  --primary-700: #0ea5e9;
+  --accent: #ffd166;
+
+  /* Focus and Interactive States */
+  --focus-ring: 0 0 0 3px rgba(56, 189, 248, 0.5);
+  --focus-ring-offset: 2px;
+  --outline-color: #60d6ff;
+
+  /* Colors: System states */
+  --danger: #ef4444;
+  --success: #22c55e;
+
+  /* Effects: Radius and shadows */
+  --radius: 12px;
+  --radius-sm: 8px;
+  --shadow-1: 0 6px 20px rgba(8,15,35,.35);
+  --shadow-2: 0 10px 30px rgba(10,20,45,.45);
+
+  /* Helpful aliases used by components */
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+  --radius-full: 999px;
+  --shadow-sm: 0 6px 18px rgba(2,6,23,0.35);
+  --shadow-md: 0 12px 36px rgba(2,6,23,0.45);
+  --shadow-lg: 0 18px 48px rgba(2,6,23,0.6);
+
+  /* Surface helpers */
+  --bg-surface: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  --bg-input: rgba(255,255,255,0.02);
+  --bg-input-focus: rgba(255,255,255,0.04);
+  --bg-surface-hover: rgba(255,255,255,0.04);
+  --text-primary: #e6ecf8;
+  --muted: rgba(210,220,230,0.9);
+  --gradient-primary: linear-gradient(90deg, var(--primary-700), var(--primary));
+  --gradient-text: linear-gradient(90deg, #ffffff, var(--primary));
+  --gradient-subtle: radial-gradient(600px 200px at 10% 10%, rgba(36,198,220,0.04), transparent 20%);
+
+  /* Layout: Spacing scale */
+  --gap-1: 6px;
+  --gap-2: 10px;
+  --gap-3: 16px;
+  --gap-4: 24px;
+  --gap-5: 32px;
+}
+
+/* Base styles and background gradient */
+html, body, #root {
+  height: 100%;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  background: linear-gradient(180deg, #0e1f3a 0%, #17284a 50%, #213a63 100%);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', 'Roboto',
+    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

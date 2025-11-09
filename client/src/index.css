@@ -1,0 +1,27 @@
+/* Import Club Lit Aurora theme */
+@import './styles/tokens.css';      /* Core design tokens and effects */
+@import './styles/theme-utils.css'; /* Reusable component styles */
+@import './styles/container.css';   /* Layout containers and grid system */
+@import './styles/responsive.css';  /* Responsive breakpoints */
+@import './styles/a11y.css';       /* Accessibility enhancements */
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.Toastify__toast {
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+.Toastify__toast--success {
+  background-color: #50c46ba3 !important;
+  color: white !important;
+}
+
+.Toastify__toast--error {
+  background-color: #dc35466e !important;
+  color: white !important;
+}

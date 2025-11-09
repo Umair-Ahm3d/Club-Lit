@@ -1,0 +1,116 @@
+/* RankingPage.css */
+.ranking-page { min-height: 100vh; display: flex; flex-direction: column; background: transparent; }
+
+.ranking-main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.ranking-container { width: 100%; max-width: 1280px; margin: 0 auto; color: var(--text); }
+
+.ranking-header { display:flex; justify-content:space-between; align-items:center; margin-bottom: 1.2rem; padding: 1rem; background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow-1); }
+.ranking-header h1{ margin:0; font-size:2.2rem; font-weight:900; letter-spacing:.4px; background:linear-gradient(90deg,#fff,var(--primary)); -webkit-background-clip:text; background-clip:text; color:transparent }
+
+.ranking-content {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.ant-list-item-meta .ant-list-item-meta-avatar { margin-left: 18px; }
+
+.ant-select-selector .ant-select-selection-wrap { text-align: center; }
+
+.ranking-list { flex: 1; background: var(--card); padding: 1rem; border-radius: var(--radius); box-shadow: var(--shadow-1); border: 1px solid var(--border); }
+
+.ant-list-item { padding: 1.1rem; margin: 0.75rem 0; background-color: var(--bg-elev); border-radius: 10px; transition: all 0.2s ease; border: 1px solid var(--border); color: var(--text); }
+.ant-list-item{ margin-left: 12px; }
+.ant-list-item-meta-title, .ant-list-item-meta-title a { color: #ffffff !important; }
+.ant-list-item-meta-description{ color: #ffffff !important; opacity: .85; }
+
+.ant-list-item:hover { transform: translateY(-2px); box-shadow: var(--shadow-1); border-color: var(--border); }
+
+.ant-avatar { background-color: var(--primary); color: #00131b; font-weight: 800; display:flex; align-items:center; justify-content:center; font-size: 1.05rem; box-shadow: var(--shadow-1); border: 2px solid rgba(255,255,255,0.25); }
+
+/* Medal / rank badge */
+.rank-medal{ display:inline-flex; align-items:center; justify-content:center; width:36px; height:36px; border-radius:9999px; background: var(--bg-elev); color:#ffffff; border:1px solid var(--border); box-shadow: var(--shadow-1); margin-right: 8px; }
+.rank-medal .medal-icon{ width:18px; height:18px; }
+.rank-medal.gold{ background: radial-gradient(circle at 30% 30%, #fff6bf 0%, #ffd700 40%, #b8860b 100%); color:#1a1200; }
+.rank-medal.silver{ background: radial-gradient(circle at 30% 30%, #f2f2f2 0%, #c0c0c0 45%, #7d7d7d 100%); color:#0f0f0f; }
+.rank-medal.bronze{ background: radial-gradient(circle at 30% 30%, #ffe1c2 0%, #cd7f32 45%, #8a4b1a 100%); color:#120a00; }
+
+.time-range-select .ant-select-selector { border-radius: 10px !important; border: 1px solid var(--border) !important; padding: 5px 12px !important; background: var(--surface) !important; color: var(--text) !important; }
+
+/* Tabs */
+.ant-tabs-nav{ margin-bottom: 8px !important; }
+.ant-tabs-nav::before{ border-bottom: 1px solid var(--border) !important; }
+.ant-tabs-tab{ color: var(--muted) !important; }
+.ant-tabs-tab:hover .ant-tabs-tab-btn{ color: var(--text) !important; }
+.ant-tabs-tab-active .ant-tabs-tab-btn{ color: var(--text) !important; font-weight: 800; }
+.ant-tabs-ink-bar{ background: var(--primary) !important; height: 2px; }
+
+@media (max-width: 768px) {
+  .ranking-content {
+    flex-direction: column;
+  }
+  
+  .book-card-sidebar {
+    width: 100%;
+    position: static;
+  }
+}
+
+/* Add to RankingPage.css */
+.ant-avatar {
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/* Gold rank */
+.ant-avatar[style*="background-color: #ffd700"] {
+  box-shadow: 0 0 8px rgba(255, 215, 0, 0.4);
+}
+
+/* Silver rank */
+.ant-avatar[style*="background-color: #c0c0c0"] {
+  box-shadow: 0 0 8px rgba(192, 192, 192, 0.4);
+}
+
+/* Bronze rank */
+.ant-avatar[style*="background-color: #cd7f32"] {
+  box-shadow: 0 0 8px rgba(205, 127, 50, 0.4);
+}
+.rank-badge {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: bold;
+  color: white;
+  font-size: 1rem;
+  margin-right: 10px;
+}
+
+.book-card-sidebar { width: 320px; position: sticky; top: 1rem; background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow-1); padding: 1rem; max-width: 90%; z-index: 10; }
+
+.close-btn { position:absolute; right:10px; top:10px; width:32px; height:32px; border-radius:9999px; border:1px solid var(--border); background: var(--bg-elev); color: var(--text); display:inline-flex; align-items:center; justify-content:center; box-shadow: var(--shadow-1); cursor:pointer }
+.close-btn:hover{ filter:brightness(1.06); transform: translateY(-1px); }
+
+.error-message {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+}
+
+.empty-books { margin:2rem 0; padding:2rem; text-align:center; background: var(--bg-elev); border:1px solid var(--border); border-radius: var(--radius); color: var(--muted); box-shadow: var(--shadow-1); }
+
+.ranking-list .ant-empty {
+  padding: 3rem 0;
+}

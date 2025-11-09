@@ -1,0 +1,184 @@
+.login_container {
+	width: 100vw;
+	min-height: 100vh;
+	background: linear-gradient(125deg, #000F2E 0%, #1A1B4B 28.65%, #182860 75.52%);
+	background-size: 200% 200%;
+	animation: aurora 15s ease infinite;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	overflow: hidden;
+}
+
+.login_container::before {
+	content: '';
+	position: absolute;
+	width: 150%;
+	height: 150%;
+	background: radial-gradient(circle, rgba(99,102,241,0.15) 0%, rgba(59,130,246,0.08) 35%, transparent 70%);
+	top: -25%;
+	left: -25%;
+	animation: rotate 20s linear infinite;
+}
+
+.login_form_container {
+	width: 900px;
+	height: 500px;
+	display: flex;
+	border-radius: var(--radius-xl);
+	box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+	background: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.03));
+	backdrop-filter: blur(12px) saturate(150%);
+	border: 1px solid rgba(255,255,255,0.08);
+	position: relative;
+	z-index: 1;
+}
+
+.left {
+	flex: 2;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(145deg, rgba(99,102,241,0.08), rgba(59,130,246,0.04));
+	border-top-left-radius: var(--radius-xl);
+	border-bottom-left-radius: var(--radius-xl);
+	color: var(--text);
+	position: relative;
+	overflow: hidden;
+}
+
+.left::after {
+	content: '';
+	position: absolute;
+	width: 200%;
+	height: 200%;
+	background: radial-gradient(circle at center, rgba(99,102,241,0.1) 0%, transparent 50%);
+	top: -50%;
+	left: -50%;
+	animation: pulse 8s ease infinite;
+}
+
+.form_container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: var(--text);
+	position: relative;
+	z-index: 1;
+}
+
+.form_container h1 {
+	font-size: 34px;
+	margin-top: 0;
+	color: var(--text);
+}
+
+.input {
+	outline: none;
+	border: 1px solid rgba(255,255,255,0.1);
+	width: 370px;
+	padding: 14px;
+	border-radius: var(--radius-sm);
+	background-color: rgba(255,255,255,0.03);
+	margin: 6px 0;
+	font-size: 14px;
+	color: var(--text);
+	transition: all 0.3s ease;
+	backdrop-filter: blur(4px);
+	box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.input:focus {
+	border-color: rgba(99,102,241,0.5);
+	background-color: rgba(255,255,255,0.05);
+	box-shadow: 0 8px 24px rgba(99,102,241,0.15);
+}
+
+.error_msg {
+	width: 370px;
+	padding: 12px;
+	margin: 6px 0;
+	font-size: 13px;
+	background-color: rgba(239,68,68,0.9);
+	color: #fff;
+	border-radius: 8px;
+	text-align: center;
+	box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+}
+
+.right {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(180deg, rgba(8,15,30,0.6), rgba(20,36,60,0.6));
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	color: var(--text);
+}
+
+.right h1 {
+	margin-top: 0;
+	color: var(--text);
+	font-size: 28px;
+	align-self: center;
+}
+
+.white_btn,
+.green_btn {
+	border: none;
+	outline: none;
+	padding: 12px 24px;
+	border-radius: var(--radius-full);
+}
+
+@keyframes aurora {
+	0% { background-position: 0% 50%; }
+	50% { background-position: 100% 50%; }
+	100% { background-position: 0% 50%; }
+}
+
+@keyframes rotate {
+	from { transform: rotate(0deg); }
+	to { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+	0% { transform: scale(1); opacity: 0.5; }
+	50% { transform: scale(1.1); opacity: 0.8; }
+	100% { transform: scale(1); opacity: 0.5; }
+}
+	/* width: 180px;
+	font-weight: 700;
+	font-size: 14px;
+	cursor: pointer;
+	transition: all 0.18s ease;
+} */
+
+.white_btn {
+	background: rgba(255,255,255,0.02);
+	color: var(--text);
+	border: 1px solid rgba(255,255,255,0.04);
+	box-shadow: 0 6px 18px rgba(2,6,23,0.4);
+}
+
+.white_btn:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 12px 30px rgba(2,6,23,0.55);
+}
+
+.green_btn {
+	background: linear-gradient(90deg, var(--primary-700), var(--primary));
+	color: #00131b;
+	margin: 10px;
+	box-shadow: 0 10px 30px rgba(54,209,220,0.12);
+}
+
+.green_btn:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 18px 48px rgba(54,209,220,0.16);
+	filter: brightness(1.03);
+}

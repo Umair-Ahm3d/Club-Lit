@@ -1,0 +1,96 @@
+/* Container utilities for consistent max-width and responsive layouts */
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  max-width: var(--container-width, 1280px);
+}
+
+.container-sm {
+  max-width: var(--container-sm, 640px);
+}
+
+.container-md {
+  max-width: var(--container-md, 768px);
+}
+
+.container-lg {
+  max-width: var(--container-lg, 1024px);
+}
+
+.container-xl {
+  max-width: var(--container-xl, 1280px);
+}
+
+/* Grid system */
+.grid {
+  display: grid;
+  gap: var(--spacing-6, 1.5rem);
+}
+
+/* Responsive column layouts */
+.grid-1 {
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Responsive breakpoints */
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Auto-fit grid for dynamic columns */
+.grid-auto-fit {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* Grid gap utilities */
+.gap-2 { gap: var(--spacing-2); }
+.gap-4 { gap: var(--spacing-4); }
+.gap-6 { gap: var(--spacing-6); }
+.gap-8 { gap: var(--spacing-8); }
+
+/* Alignment utilities */
+.items-center { align-items: center; }
+.items-start { align-items: start; }
+.items-end { align-items: end; }
+
+.justify-center { justify-content: center; }
+.justify-between { justify-content: space-between; }
+.justify-around { justify-content: space-around; }
+
+/* Content flow utilities */
+.flow > * + * {
+  margin-top: var(--spacing-6);
+}
+
+.flow-sm > * + * {
+  margin-top: var(--spacing-4);
+}
+
+.flow-lg > * + * {
+  margin-top: var(--spacing-8);
+}

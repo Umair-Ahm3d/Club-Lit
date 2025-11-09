@@ -1,0 +1,99 @@
+/* Responsive Design */
+@media (max-width: 1280px) {
+  .grid-container,
+  .benefits,
+  .bookQuotes {
+    margin: var(--spacing-4);
+  }
+}
+
+@media (max-width: 1024px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: var(--spacing-4);
+  }
+
+  .leftSection {
+    align-items: center;
+    order: 2;
+    padding: var(--spacing-4);
+  }
+
+  .rightSection {
+    order: 1;
+    padding: var(--spacing-4);
+  }
+
+  .bookgridImage {
+    max-width: 80%;
+  }
+
+  .textContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .benefitList {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-4);
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: var(--spacing-4);
+  }
+
+  .rightNav {
+    gap: var(--spacing-2);
+  }
+
+  .navButton {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+
+  .grid-container {
+    padding: var(--spacing-4);
+  }
+
+  .textContent h1 {
+    font-size: 2.5rem;
+  }
+
+  .textContent p {
+    font-size: 1rem;
+  }
+
+  .benefitList {
+    grid-template-columns: 1fr;
+  }
+
+  .benefitItem {
+    padding: var(--spacing-4);
+  }
+
+  .book-quotes blockquote {
+    font-size: 1rem;
+    padding: var(--spacing-4);
+  }
+}
+
+@media (max-width: 480px) {
+  .buttons {
+    flex-direction: column;
+    gap: var(--spacing-4);
+    width: 100%;
+  }
+
+  .signUpButton {
+    width: 100%;
+  }
+
+  .navButton {
+    padding: 0.5rem;
+    font-size: 0.75rem;
+  }
+}

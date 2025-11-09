@@ -1,0 +1,81 @@
+.about-page { background: transparent; }
+
+.about-container {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 24px;
+  max-width: 1100px;
+  margin: 32px auto;
+  color: var(--text);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-1);
+}
+
+.about-container h1 {
+  text-align: left;
+  font-size: 36px;
+  margin-bottom: 16px;
+  background: linear-gradient(90deg, #ffffff, var(--primary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.about-container p {
+  line-height: 1.75;
+  font-size: 17px;
+  margin-bottom: 14px;
+  color: var(--muted);
+}
+
+.about-container h2 {
+  font-size: 24px;
+  margin-top: 28px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  border-left: 4px solid var(--accent);
+}
+
+.about-container ul { list-style: none; padding: 0; }
+.about-container ul li {
+  margin: 10px 0;
+  font-size: 17px;
+  padding-left: 25px;
+  position: relative;
+}
+.about-container ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--primary);
+}
+
+.about-container a { color: var(--primary); text-decoration: none; font-weight: 700; }
+.about-container a:hover { text-decoration: underline; }
+
+/* Section-wise glass panels */
+.about-section {
+  position: relative;
+  margin: 14px 0;
+  padding: 16px 16px 12px 16px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-1);
+}
+.about-section.intro {
+  background: linear-gradient(180deg, rgba(90,209,255,0.06), rgba(255,209,102,0.04));
+  border: 1px solid rgba(90,209,255,0.18);
+}
+.about-section + .about-section { margin-top: 18px; }
+
+@media (max-width: 768px) {
+  .about-container { padding: 16px; margin: 10px; }
+  .about-container h1 { font-size: 28px; }
+  .about-container h2 { font-size: 22px; }
+  .about-container p, .about-container ul li { font-size: 15px; }
+}
